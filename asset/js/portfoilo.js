@@ -69,11 +69,15 @@ const themeIcon = document.getElementById("themeIcon");
 
 theme.onclick = function() {
   document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-    themeIcon.innerHTML = '<i class="ri-sun-line"></i>';
-  } else {
-    themeIcon.innerHTML = '<i class="ri-moon-line"></i>';
-  }
+  //if (document.body.classList.contains("dark-theme")) {
+    //themeIcon.innerHTML = '<i class="ri-sun-line"></i>';
+  //} else {
+    //themeIcon.innerHTML = '<i class="ri-moon-line"></i>';
+  //}
+
+  onclick = (document.body.classList.contains("dark-theme")) ?
+   themeIcon.innerHTML = '<i class="ri-sun-line"></i>'
+   : themeIcon.innerHTML = '<i class="ri-moon-line"></i>'
 };
 
 // active
@@ -211,12 +215,12 @@ const newDateElement = document.getElementById("newdate");
 
 const currentYearAndDay = getCurrentYearAndDay();
 
-const formattedDate = currentYearAndDay.year + '/' + currentYearAndDay.day;
+const formattedDate = `${currentYearAndDay.year} / ${currentYearAndDay.day}`;
 newDateElement.innerHTML = " " + formattedDate;
 
 // scroll reveal
 
-ScrollReveal({ 
+myReveal({ 
   origin:'top',
   distance:'60px',
   duration:2000,
@@ -225,10 +229,10 @@ ScrollReveal({
 });
 
 
-ScrollReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1,  #dirct', { origin: 'top'});
-ScrollReveal().reveal('.about-img,.contact-i, .icon, .item-f, .seprator, .about-img, .abt-ft-clo', { origin: 'left' });
-ScrollReveal().reveal('.skills, .item-l, .item-d, .info, .port-2, .con-btn, .ft-start, .tool-name, .fottersocials', { origin: 'right'});
-ScrollReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin: 'bottom' });
+myReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1,  #dirct', { origin: 'top'});
+myReveal().reveal('.about-img,.contact-i, .icon, .item-f, .seprator, .about-img, .abt-ft-clo', { origin: 'left' });
+myReveal().reveal('.skills, .item-l, .item-d, .info, .port-2, .con-btn, .ft-start, .tool-name, .fottersocials', { origin: 'right'});
+myReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin: 'bottom' });
 
 //const button = document.getElementsByClassName ("download-btn");
 
