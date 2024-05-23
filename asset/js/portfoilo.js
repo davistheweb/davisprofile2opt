@@ -216,7 +216,7 @@ const newDateElement = document.getElementById("newdate");
 const currentYearAndDay = getCurrentYearAndDay();
 
 const formattedDate = `${currentYearAndDay.year} / ${currentYearAndDay.day}`;
-newDateElement.innerHTML = " " + formattedDate;
+newDateElement.innerHTML = ` ${formattedDate}`;
 
 // scroll reveal
 
