@@ -63,11 +63,34 @@ navlist.addEventListener("click", ()=>{
 
 
 // Switch theme
+const darkThemeToggle = ()=> {
 
 const theme = document.getElementById("theme");
 const themeIcon = document.getElementById("themeIcon");
+const EventListen = 'click';
+theme.addEventListener(EventListen, ()=> {
+ const IsBodyDark = document.body.classList.toggle('dark-theme');
+ onclick = (document.body.classList.contains("dark-theme")) ?
+ themeIcon.innerHTML = '<i class="ri-sun-line"></i>'
+ : themeIcon.innerHTML = '<i class="ri-moon-line"></i>'
+  localStorage.setItem('dark', IsBodyDark);
+})
 
-theme.onclick = function() {
+const setDarkTheme =(isBodyBgDark) => {
+
+  if(isBodyBgDark){
+    document.body.classList.add('dark-theme');
+    themeIcon.innerHTML = '<i class="ri-sun-line"></i>';
+  }
+  else{
+    document.body.classList.remove("dark-theme");
+     themeIcon.innerHTML = '<i class="ri-moon-line"></i>';
+  }
+}
+const checkIfThemeDark = localStorage.getItem('dark') === "true";
+setDarkTheme(checkIfThemeDark);
+
+/* theme.onclick = function() {
   document.body.classList.toggle("dark-theme");
   //if (document.body.classList.contains("dark-theme")) {
     //themeIcon.innerHTML = '<i class="ri-sun-line"></i>';
@@ -78,8 +101,9 @@ theme.onclick = function() {
   onclick = (document.body.classList.contains("dark-theme")) ?
    themeIcon.innerHTML = '<i class="ri-sun-line"></i>'
    : themeIcon.innerHTML = '<i class="ri-moon-line"></i>'
-};
-
+}; */
+}
+darkThemeToggle()
 // active
 const sections = document.querySelectorAll('section');
 const navLists = document.querySelectorAll('header .navlist a');
