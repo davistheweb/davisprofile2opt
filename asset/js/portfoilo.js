@@ -67,8 +67,8 @@ const darkThemeToggle = ()=> {
 
 const theme = document.getElementById("theme");
 const themeIcon = document.getElementById("themeIcon");
-const EventListen = 'click';
-theme.addEventListener(EventListen, ()=> {
+//const EventListen = 'click';
+theme.addEventListener('click', ()=> {
  const IsBodyDark = document.body.classList.toggle('dark-theme');
  onclick = (document.body.classList.contains("dark-theme")) ?
  themeIcon.innerHTML = '<i class="ri-sun-line"></i>'
