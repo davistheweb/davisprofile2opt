@@ -104,6 +104,8 @@ setDarkTheme(checkIfThemeDark);
 }; */
 }
 darkThemeToggle()
+
+
 // active
 const sections = document.querySelectorAll('section');
 const navLists = document.querySelectorAll('header .navlist a');
