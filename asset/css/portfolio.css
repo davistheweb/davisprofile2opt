@@ -976,7 +976,7 @@ justify-content: start;
     margin: .5rem ;
     border: 1px solid var(--input-background-color);
     border-radius: 7px;
-    font-size: 12px;
+    font-size: 16px;
     color: var(--main-text-color);
     font-family: var(--general-font);
     font-weight: var(--font-bold);
@@ -1519,7 +1519,7 @@ footer .footer-end a .dav-name {
     .contact-i form input::placeholder,
     .contact-i form textarea::placeholder 
     {
-    font-size: 17px;
+    font-size: 16px;
     }   
 
     footer .ft-start {
@@ -1671,11 +1671,11 @@ footer .footer-end a .dav-name {
     .contact-i form input::placeholder,
     .contact-i form textarea::placeholder
     {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .con-btn {
-        font-size: 12px;
+        font-size: 17px;
     }
 
     .dav-img {
@@ -1946,7 +1946,7 @@ footer .footer-end a .dav-name {
 
     .contact-i form input::placeholder,
     .contact-i form textarea::placeholder {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .con-btn {
